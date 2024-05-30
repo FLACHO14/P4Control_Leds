@@ -2,8 +2,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-
-
 extern "C"{
   #include "hal.h"
   #include "Fleds.h"
@@ -13,7 +11,7 @@ extern "C"{
 int16_t interval = 1000;    // Intervalo de tiempo en milisegundos
 unsigned long prevMillis = 0;  // Almacena el tiempo en milisegundos
 int16_t mov = 0;
-
+int n[4];
 
 void setup() {
   Serial.begin(115200);
@@ -39,16 +37,17 @@ void loop() {
     Led_ON(l[mov]);  // Enciende el LED actual
 
     mov++;  // Incrementa el índice
-    if (mov >= nLeds - 1) {
+    if (mov >= nLeds ) {
       mov = 0;  // Resetea el índice si ha pasado por todos los LEDs
     }
   }
 
   // Leer los botones
-  int n[3];
+  
   n[0] = leerBot(SW1);
   n[1] = leerBot(SW2);
   n[2] = leerBot(SW3);
+  n[3] = leerBot(SW4);
   
   char buffer[50];
   sprintf(buffer, "%d %d %d \n", n[0], n[1], n[2]);

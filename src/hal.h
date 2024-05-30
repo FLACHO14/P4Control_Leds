@@ -13,6 +13,7 @@
 #define SW1  7
 #define SW2  6
 #define SW3  5
+#define SW4  4
 
 typedef int gpioMap_t;
 
