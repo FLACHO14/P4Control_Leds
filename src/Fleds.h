@@ -7,6 +7,7 @@
 extern int16_t nLeds;
 
 gpioMap_t *myLeds();
+gpioMap_t *myLeds2();
 bool Led_ON(int16_t Led);
 void led_OFF();
 void initLeds();

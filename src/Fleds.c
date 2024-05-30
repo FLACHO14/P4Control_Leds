@@ -4,12 +4,15 @@
 #include "hal.h"
 
 static const gpioMap_t leds[] = {Led_Vr, Led_Am, Led_Rj, Led_Az};
+static const gpioMap_t leds2[] = {Led_Az, Led_Rj, Led_Am, Led_Vr};
 int16_t nLeds = sizeof(leds) / sizeof(gpioMap_t);
 
 gpioMap_t *myLeds(){
   return leds;
 }
-
+gpioMap_t *myLeds2(){
+  return leds2;
+}
 bool Led_ON(int16_t Led) {
   switch (Led) {
     case Led_Vr:
