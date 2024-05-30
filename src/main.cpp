@@ -46,14 +46,16 @@ void loop() {
     prevMillis = currentMillis;  // Actualiza el tiempo previo
 
     gpioMap_t *l = myLeds();
-
+    gpioMap_t *l2 = myLeds2();
 
     led_OFF();  // Apaga todos los LEDs
 
 
- 
+    if (n[0] == 1) {
       Led_ON(l[mov]);  // Enciende el LED actual en la secuencia alterna
-
+    } else {
+      Led_ON(l2[mov]);  // Enciende el LED actual en la secuencia normal
+    }
 
     mov++;  // Incrementa el índice
     if (mov >= nLeds) {
