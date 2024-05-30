@@ -35,6 +35,12 @@ void loop() {
   if (leerBot(SW2)) {
     n[0] = 1; // Si SW2 está presionado, n[0] vuelve a 0
   }
+    if (leerBot(SW3)) {
+    interval = 200; // Si SW3 está presionado, el intervalo es 200 ms
+  }
+  if (leerBot(SW4)) {
+    interval = 750; // Si SW4 está presionado, el intervalo es 750 ms
+  }
 
   if (currentMillis - prevMillis >= interval) {
     prevMillis = currentMillis;  // Actualiza el tiempo previo
@@ -55,10 +61,6 @@ void loop() {
     if (mov >= nLeds) {
       mov = 0;  // Resetea el índice si ha pasado por todos los LEDs
     }
-
-
-
-
 
   }
 
