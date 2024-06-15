@@ -6,7 +6,7 @@
 #include "hal.h"
 #include <stdbool.h>
 
-///////// add del sistema anti rebote////
+///////// add del sistema anti rebote///////
 
 
 typedef enum {
