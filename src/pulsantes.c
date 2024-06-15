@@ -7,7 +7,7 @@ bool leerBot(int16_t bot) {
 }
 
 
-///////////// add sistema anti rebote ///////////////
+////////////// add sistema anti rebote ///////////////
 
 
 void initButton(DebounceButton *button, int16_t pin, uint32_t debounceDelay) {
