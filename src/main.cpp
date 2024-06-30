@@ -74,4 +74,3 @@ void loop() {
   sprintf(buffer, "%d %d %d \n", n[0], n[1], n[2]);
   Serial.print(buffer);
 }
-
