@@ -39,3 +39,17 @@ void initLeds(){
   } 
 }
 
+#include "Fleds.h"
+#include <Arduino.h>
+
+void init_leds() {
+  for (int i = 4; i < 8; i++) {
+    pinMode(i, OUTPUT);
+  }
+}
+
+void update_leds() {
+  for (int i = 4; i < 8; i++) {
+    digitalWrite(i, digitalRead(i - 4));
+  }
+}
